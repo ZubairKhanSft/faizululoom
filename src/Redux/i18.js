@@ -2,7 +2,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from "react-i18next";
 
-const saveLanguage = localStorage.getItem('language') || 'en';
+const saveLanguage = localStorage.getItem('language') || 'ar';
 const goals = [
   'Improve the quality of higher education.',
   'Place students in student-centered learning environment that promotes economic and social development, with the aim to provide them with leadership skills and engage them in society service.',
@@ -38,7 +38,7 @@ i18n.use(initReactI18next).init({
           goal2: "Place students in student-centered learning environment that promotes economic and social development, with the aim to provide them with leadership skills and engage them in society service.",
           goal3: "Promote innovation and the pursuit of excellence in teaching and learning.",
           goal4: "Adopt modern teaching methods such as classroom learning, distance learning, e-learning, mobile learning, and lifelong self-learning.",
-         cgoal5: "Apply universally recognized systems to ensure the quality of education and academic accreditation, both at the administrative and academic levels, and to compete with Arab and international universities.",
+          goal5: "Apply universally recognized systems to ensure the quality of education and academic accreditation, both at the administrative and academic levels, and to compete with Arab and international universities.",
          Strength:'Madarsa Strength',
          strengthbody:'The Madarsa Faiz Ul Uloom Seoni propagates human values and forbearance to fulfill the ideology and dream of its founders.',
          seoniText1: "Shahr Seoni is a city and district in the state of Madhya Pradesh. Roadways and railways connect Seoni to Bhopal. National Highway 7 connects Nagpur (Maharashtra) to Jabalpur via Seoni. The distance from Nagpur to Seoni is 127 km, and from Seoni to Jabalpur is 145 km. Nagpur also has an international airport. Approximately 30% of Seoni's population is Muslim. The district is highly underdeveloped in education, and the population is mostly simple and modest.",
