@@ -169,71 +169,92 @@ const [checked, setChecked] = useState(true);
         </Grid> */}
 
     
+    {/* test */}
+    <Box sx={{ 
+  backgroundColor: '#f4f4f9', 
+  padding: { xs: '1.5rem 1rem', sm: '3rem 2rem' }, // Mobile padding reduced
+  color: 'grey'
+}}>
+  <Grid container spacing={{ xs: 2, sm: 3 }} justifyContent="center"> {/* Responsive spacing */}
     
-        <Box sx={{ backgroundColor: '#f4f4f9', padding: '3rem 2rem' ,color:'grey'}}>
-        <Grid container spacing={1} justifyContent="center">
-            
-            {/* Iterate over cardContent array */}
-            {cardContent.map((card, index) => (
-            <Grow
-                in={checked} // Animation trigger
-                key={index}
-                style={{ transformOrigin: '0 0 0' }} // Controls the origin of the grow animation
-                {...(checked ? { timeout: index * 2000 } : {})} // Staggered animation delay
+    {cardContent.map((card, index) => (
+      <Grow
+        in={checked}
+        key={index}
+        style={{ transformOrigin: '0 0 0' }}
+        {...(checked ? { timeout: index * 2000 } : {})}
+      >
+        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ padding: { xs: '0.5rem', sm: '1rem' } }}> {/* Mobile padding */}
+          <Paper 
+            elevation={3} 
+            sx={{ 
+              padding: { xs: '1.5rem', sm: '2rem' }, // Responsive padding
+              textAlign: 'center',
+              position: 'relative',
+              height: { xs: 'auto', sm: '200px', md: '250px' }, // Auto height for mobile
+              width: { xs: '90%', sm: '100%', md: '250px' }, // Width adjustment
+              margin: '0 auto',
+              borderRadius: '10px',
+              color: 'grey',
+              transition: 'transform 0.3s ease-in-out',
+              '&:hover': {
+                transform: { xs: 'none', sm: 'scale(1.05)' }, // Disable hover effect on mobile
+                boxShadow: { xs: '0px 4px 10px rgba(0, 0, 0, 0.1)', sm: '0px 8px 20px rgba(0, 0, 0, 0.1)' }
+              }
+            }}
+          > 
+            {/* Icon Container - Mobile Adjustments */}
+            <Box 
+              sx={{
+                position: 'absolute',
+                top: { xs: '-25px', sm: '-30px' }, // Adjusted for mobile
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { xs: '50px', sm: '60px' }, // Smaller icon on mobile
+                height: { xs: '50px', sm: '60px' },
+                backgroundColor: '#fff',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+              }}
             >
-                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                <Paper 
-                    elevation={3} 
-                    sx={{ 
-                    padding: '2rem', 
-                    textAlign: 'center', 
-                    position: 'relative', 
-                    height: { xs: '1500px', sm: '200px', md: '250px' },  // Responsive height
-                    width: { xs: '100%', sm: '100%', md: '250px' },  // Responsive width
-                    margin: '0 auto', // Centering for smaller screens
-                    borderRadius: '10px',
-                    color: 'grey',
-                    transition: 'transform 0.3s ease-in-out', // Hover effect
-                    '&:hover': {
-                        transform: 'scale(1.05)', // Scale on hover
-                        boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.1)', // Shadow on hover
-                    }
-                    }}
-                > 
-                    {/* Circular Icon Container */}
-                    <Box 
-                    sx={{
-                        position: 'absolute',
-                        top: '-30px', // Push circle upward
-                        left: '50%',
-                        transform: 'translateX(-50%)', // Center horizontally
-                        width: '60px',
-                        height: '60px',
-                        backgroundColor: '#fff',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', // Shadow for circle
-                    }}
-                    >
-                    {card.icon}
-                    </Box>
+              {card.icon}
+            </Box>
 
-                    {/* Card Content */}
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#005587', marginTop: '40px', marginBottom: '1rem' }}>
-                    {t(`${card.title}`)}
-                    </Typography>
-                    <Typography variant="body1" sx={{ color: '#333' }}>
-                    {t(`${card.body}`)}
-                    </Typography>
-                </Paper>
-                </Grid>
-            </Grow>
-            ))}
-
+            {/* Content Adjustments */}
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                fontWeight: 'bold', 
+                color: '#005587', 
+                marginTop: { xs: '30px', sm: '40px' }, // Adjusted for mobile
+                marginBottom: { xs: '0.5rem', sm: '1rem' },
+                fontSize: { xs: '1.1rem', sm: '1.25rem' } // Responsive font
+              }}
+            >
+              {t(`${card.title}`)}
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                color: '#333',
+                fontSize: { xs: '0.9rem', sm: '1rem' }, // Smaller text on mobile
+                lineHeight: { xs: '1.4', sm: '1.6' }
+              }}
+            >
+              {t(`${card.body}`)}
+            </Typography>
+          </Paper>
         </Grid>
-        </Box>
+      </Grow>
+    ))}
+
+  </Grid>
+    </Box>
+
+        
  
        <AboutUs/>
        <Vision/>

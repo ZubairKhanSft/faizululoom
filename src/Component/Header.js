@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const pages = [
     { name: 'Home', path: '/' },
     { name: 'AboutUs', path: '/about' },
-    { name: 'Donate', path: '#donate' },
+    { name: 'Donate', path: '/donate' },
     { name: 'ContactUs', path: '/contact' },
     { name: 'Gallery', path: '/gallery' }
   ];

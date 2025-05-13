@@ -6,7 +6,7 @@ import { imgConfig } from '../Asset/Images/img.confg'
 const DonateUs = () => {
   return (
     <>
-   
+   <Header/>
     <Grid  md={12} xs={12} >
                   <Box  sx={{
                               width: '100%',
@@ -49,7 +49,7 @@ const DonateUs = () => {
             </Box>
           </Grid>
         {/* </Grid> */}
-    {/* s<Footer/> */}
+    <Footer/>
     </>
   )
 }
