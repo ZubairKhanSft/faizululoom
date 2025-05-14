@@ -1,4 +1,4 @@
-import { Container,Grow,Box ,Typography,Grid ,Paper } from "@mui/material";
+import { Container,Grow,Box ,Typography,Grid ,Paper,Button } from "@mui/material";
 import Header from "../Component/Header";
 import Home from "./Home";
 import { imgConfig } from "../Asset/Images/img.confg";
@@ -76,6 +76,9 @@ const [checked, setChecked] = useState(true);
   return (
    <>
         <Header/>
+
+       
+        
         <Box sx={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',scrollBehavior:'smooth',padding:'7px'}}>
               
               {/* Add Global Keyframes for Fade In */}
@@ -112,6 +115,7 @@ const [checked, setChecked] = useState(true);
 
         </Box>
         
+       
         <Box sx={{ display:'flex',flexDirection:'column', padding: '1rem',backgroundColor:'green',scrollBehavior:'smooth',animation: 'slideIn 2.5s ease-out', // Apply the animation
     '@keyframes slideIn': {
       '0%': {
