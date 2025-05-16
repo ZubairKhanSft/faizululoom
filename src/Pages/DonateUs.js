@@ -1,8 +1,9 @@
 import React from 'react'
 import Header from '../Component/Header'
 import Footer from '../Component/Footer'
-import { Box,Grid,Typography ,Container} from '@mui/material'
+import { Box,Grid,Typography ,Container,Paper,List,ListItem,Button,Avatar} from '@mui/material'
 import { imgConfig } from '../Asset/Images/img.confg'
+import { useTheme } from '@mui/material/styles';
 // const DonateUs = () => {
 //   return (
 //     <>
@@ -54,12 +55,13 @@ import { imgConfig } from '../Asset/Images/img.confg'
 //   )
 // }
 const DonateUs = () => {
+  const theme = useTheme();
   return (
     <>
       <Header />
 
       {/* Banner Section */}
-      <Box
+      {/* <Box
         sx={{
           width: '100%',
           height: { xs: '30vh', md: '40vh' },
@@ -75,10 +77,10 @@ const DonateUs = () => {
       >
         <Typography variant="h4" sx={{ fontWeight: 'bold' }}>Donate Us</Typography>
         <Typography variant="subtitle1">Your support makes a difference</Typography>
-      </Box>
+      </Box> */}
 
       {/* Donation Info Section */}
-      <Box sx={{ backgroundColor: '#F1F9F5', py: 5 }}>
+      {/* <Box sx={{ backgroundColor: '#F1F9F5', py: 5 }}>
         <Container maxWidth="md">
           <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#d4982c', textAlign: 'center', mb: 2 }}>
             Support Madarsa Faizul Uloom
@@ -120,8 +122,203 @@ const DonateUs = () => {
             Your generosity ensures we continue to provide quality education and community support. Thank you for your support.
           </Typography>
         </Container>
+      </Box> */}
+
+        {/* Hero Section */}
+      <Box sx={{ 
+        bgcolor: 'primary.dark', 
+        py: { xs: 6, md: 8 },
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <Container maxWidth="lg">
+          <Typography variant="h3" sx={{
+            fontWeight: 700,
+            color: 'common.white',
+            textAlign: 'center',
+            mb: 2,
+            fontSize: { xs: '2rem', md: '2.75rem' }
+          }}>
+            Support Our Educational Mission
+          </Typography>
+          <Typography variant="h6" sx={{
+            color: 'rgba(255,255,255,0.9)',
+            textAlign: 'center',
+            maxWidth: 800,
+            mx: 'auto',
+            fontSize: { xs: '1rem', md: '1.25rem' }
+          }}>
+            Your contribution helps sustain traditional Islamic education combined with modern learning
+          </Typography>
+        </Container>
       </Box>
 
+      {/* Donation Content */}
+      <Box sx={{ 
+        bgcolor: 'background.paper', 
+        py: { xs: 6, md: 8 },
+        position: 'relative'
+      }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={4}>
+            {/* Bank Details */}
+            <Grid item xs={12} md={6}>
+              <Paper elevation={0} sx={{
+                p: { xs: 3, md: 4 },
+                borderRadius: 2,
+                border: `1px solid ${theme.palette.divider}`,
+                height: '100%'
+              }}>
+                <Typography variant="h5" sx={{
+                  fontWeight: 600,
+                  color: 'text.primary',
+                  mb: 3,
+                  textAlign: 'center'
+                }}>
+                  Bank Transfer Information
+                </Typography>
+                
+                <Box sx={{
+                  '& .detail-item': {
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    py: 1.5,
+                    borderBottom: `1px solid ${theme.palette.divider}`,
+                    '&:last-child': { border: 0 }
+                  }
+                }}>
+                  <div className="detail-item">
+                    <Typography variant="body2">Account Name</Typography>
+                    <Typography variant="body2" fontWeight="600">
+                      Madarsa Faizul Uloom
+                    </Typography>
+                  </div>
+                  <div className="detail-item">
+                    <Typography variant="body2">Account Number</Typography>
+                    <Typography variant="body2" fontFamily="monospace">
+                      1234 5678 9012
+                    </Typography>
+                  </div>
+                  <div className="detail-item">
+                    <Typography variant="body2">Bank Name</Typography>
+                    <Typography variant="body2">ABC Islamic Bank</Typography>
+                  </div>
+                  <div className="detail-item">
+                    <Typography variant="body2">IFSC Code</Typography>
+                    <Typography variant="body2" fontFamily="monospace">
+                      ABCD0123456
+                    </Typography>
+                  </div>
+                </Box>
+              </Paper>
+            </Grid>
+
+            {/* QR Code Section */}
+            <Grid item xs={12} md={6}>
+              <Paper elevation={0} sx={{
+                p: { xs: 3, md: 4 },
+                borderRadius: 2,
+                border: `1px solid ${theme.palette.divider}`,
+                height: '100%',
+                textAlign: 'center'
+              }}>
+                <Typography variant="h5" sx={{
+                  fontWeight: 600,
+                  color: 'text.primary',
+                  mb: 3
+                }}>
+                  Instant UPI Payment
+                </Typography>
+                
+                <Avatar
+                  src="/qr-placeholder.jpg"
+                  variant="rounded"
+                  sx={{
+                    width: 220,
+                    height: 220,
+                    mx: 'auto',
+                    mb: 2,
+                    bgcolor: 'common.white',
+                    padding: 2,
+                    border: `1px solid ${theme.palette.divider}`
+                  }}
+                />
+
+                <Typography variant="body2" sx={{
+                  color: 'text.secondary',
+                  mb: 3,
+                  maxWidth: 300,
+                  mx: 'auto'
+                }}>
+                  Scan using any UPI app: PhonePe, Google Pay, Paytm
+                </Typography>
+
+                <Button 
+                  variant="contained" 
+                  size="large"
+                  sx={{
+                    minWidth: 200,
+                    borderRadius: 1,
+                    textTransform: 'none',
+                    fontWeight: 600,
+                    boxShadow: theme.shadows[2],
+                    '&:hover': {
+                      boxShadow: theme.shadows[4]
+                    }
+                  }}
+                >
+                  Donate Now
+                </Button>
+              </Paper>
+            </Grid>
+          </Grid>
+
+          {/* Impact Section */}
+          <Box sx={{ 
+            textAlign: 'center', 
+            mt: { xs: 6, md: 8 },
+            px: { xs: 2, md: 0 }
+          }}>
+            <Typography variant="h4" sx={{
+              fontWeight: 700,
+              color: 'text.primary',
+              mb: 3
+            }}>
+              Your Contribution Makes Difference
+            </Typography>
+            
+            <Grid container spacing={3} justifyContent="center">
+              {[
+                { title: 'Students Educated', value: '500+' },
+                { title: 'Years of Service', value: '55+' },
+                { title: 'Courses Offered', value: '12' }
+              ].map((item, index) => (
+                <Grid item key={index} xs={6} md={4}>
+                  <Paper sx={{
+                    p: 3,
+                    borderRadius: 2,
+                    bgcolor: 'background.default'
+                  }}>
+                    <Typography variant="h4" sx={{ 
+                      color: 'primary.main',
+                      fontWeight: 700,
+                      mb: 1
+                    }}>
+                      {item.value}
+                    </Typography>
+                    <Typography variant="body2" sx={{ 
+                      color: 'text.secondary',
+                      fontWeight: 500
+                    }}>
+                      {item.title}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Container>
+      </Box>
       <Footer />
     </>
   );

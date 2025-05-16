@@ -79,9 +79,9 @@ const [checked, setChecked] = useState(true);
 
        
         
-        <Box sx={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',scrollBehavior:'smooth',padding:'7px'}}>
+        {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',scrollBehavior:'smooth',padding:'7px'}}>
               
-              {/* Add Global Keyframes for Fade In */}
+             
   <style>
     {`
       @keyframes fadeIn {
@@ -113,8 +113,123 @@ const [checked, setChecked] = useState(true);
 
                 <Typography variant="body1" gutterBottom sx={{ marginTop: '5px', padding: '5px', textAlign: 'center' ,animation:'fadeIn  2s ease-in'}}>{t('join')} </Typography>
 
-        </Box>
-        
+        </Box> */}
+        <Box 
+  sx={{ 
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    scrollBehavior: 'smooth',
+    padding: { xs: 2, md: 3 },
+    minHeight: '60vh',
+    backgroundColor: 'background.paper',
+    position: 'relative',
+    overflow: 'hidden'
+  }}
+>
+  {/* Fade In Animation */}
+  <Box
+    sx={{
+      '@keyframes fadeIn': {
+        '0%': { opacity: 0, transform: 'translateY(20px)' },
+        '100%': { opacity: 1, transform: 'translateY(0)' }
+      },
+      animation: 'fadeIn 0.8s ease-out'
+    }}
+  >
+    <Typography 
+      variant="h3"
+      sx={{
+        textAlign: 'center',
+        color: 'primary.main',
+        fontWeight: 700,
+        fontSize: { xs: '2rem', md: '3rem' },
+        mb: 1,
+        animation: 'fadeIn 0.8s ease-out'
+      }}
+    >
+      {t('welcome')}
+    </Typography>
+
+    <Typography 
+      variant="h5"
+      sx={{
+        textAlign: 'center',
+        color: 'text.secondary',
+        fontWeight: 500,
+        fontSize: { xs: '1.2rem', md: '1.5rem' },
+        mb: 2,
+        animation: 'fadeIn 1s ease-out'
+      }}
+    >
+      {t('to')}
+    </Typography>
+
+    <Typography 
+      variant="h3"
+      sx={{
+        textAlign: 'center',
+        color: 'primary.main',
+        fontWeight: 700,
+        fontSize: { xs: '2rem', md: '3rem' },
+        mb: 4,
+        animation: 'fadeIn 1.2s ease-out'
+      }}
+    >
+      {t('madarsa')}
+    </Typography>
+
+    <Typography 
+      variant="body1"
+      sx={{
+        textAlign: 'center',
+        color: 'text.primary',
+        maxWidth: 800,
+        mx: 'auto',
+        mb: 3,
+        fontSize: { xs: '0.875rem', md: '1rem' },
+        lineHeight: 1.6,
+        animation: 'fadeIn 1.4s ease-in'
+      }}
+    >
+      {t('intro1')}
+    </Typography>
+
+    <Typography 
+      variant="body1"
+      sx={{
+        textAlign: 'center',
+        color: 'text.primary',
+        maxWidth: 800,
+        mx: 'auto',
+        mb: 3,
+        fontSize: { xs: '0.875rem', md: '1rem' },
+        lineHeight: 1.6,
+        animation: 'fadeIn 1.6s ease-in'
+      }}
+    >
+      {t('intro2')}
+    </Typography>
+
+    <Typography 
+      variant="body1"
+      sx={{
+        textAlign: 'center',
+        color: 'primary.main',
+        fontWeight: 600,
+        fontSize: { xs: '1rem', md: '1.125rem' },
+        animation: 'fadeIn 1.8s ease-in',
+        '&:hover': {
+          transform: 'scale(1.02)',
+          transition: 'transform 0.3s ease'
+        }
+      }}
+    >
+      {t('join')}
+    </Typography>
+  </Box>
+</Box>
        
         <Box sx={{ display:'flex',flexDirection:'column', padding: '1rem',backgroundColor:'green',scrollBehavior:'smooth',animation: 'slideIn 2.5s ease-out', // Apply the animation
     '@keyframes slideIn': {

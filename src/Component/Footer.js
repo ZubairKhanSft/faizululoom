@@ -318,7 +318,7 @@ const Footer = () => {
           }}>
             © {new Date().getFullYear()} Madarsa Faiz-Ul-Uloom. All rights reserved.
             <br />
-            Developed with ❤️ by [Your Organization]
+            Developed with ❤️ by [ZK]
           </Typography>
         </Box>
       </Container>
