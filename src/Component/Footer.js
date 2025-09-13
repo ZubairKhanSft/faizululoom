@@ -7,7 +7,7 @@ import { imgConfig } from '../Asset/Images/img.confg';
 const quickLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About Us' },
-  { path: '/admissions', label: 'Admissions' },
+  { path: '/faculty', label: 'Faculty' },
   { path: '/courses', label: 'Courses' },
   { path: '/contact', label: 'Contact' }
 ];

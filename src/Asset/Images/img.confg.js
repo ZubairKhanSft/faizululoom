@@ -26,10 +26,21 @@ import stud2 from "./stud2.jpg";
 import stud4 from "./stud4.jpg";
 import stud5 from "./stud5.jpg";
 import stud6 from "./stud6.jpg";
+import QR from "./QR.jpeg";
+import madanisb from "./Madani sahab.jpeg";
+import abwahid from "./Wahid Molana.jpeg";
+import shakeel from "./Shakeel omlana.jpeg";
+import Shahid from "./shahid molana.jpeg";
+import Zeeshan from "./Zeeshan Monala.jpeg";
+import Inam from "./inamurraheem.jpeg";
+import Irfanul from "./ifranulhaq.jpeg";
+import master from "./master sahab.jpeg";
+import Mubeen from "./mubeen.jpeg";
+
 
 export const imgConfig={
     img1,img2,img3,img4,img5,img6,img7,img8,
     logo,mfu,about,mission,logo1,donate, back
     ,ind1,lib1,lib2,lib3,lib4,lib5,lib6,lib7,
-    stud1,stud2,stud4,stud5,stud6
+    stud1,stud2,stud4,stud5,stud6,QR,madanisb,abwahid,shakeel,Shahid,Zeeshan,Inam,Irfanul,master,Mubeen
 }

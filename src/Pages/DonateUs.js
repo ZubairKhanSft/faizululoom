@@ -196,17 +196,17 @@ const DonateUs = () => {
                   <div className="detail-item">
                     <Typography variant="body2">Account Number</Typography>
                     <Typography variant="body2" fontFamily="monospace">
-                      1234 5678 9012
+                      010764509616
                     </Typography>
                   </div>
                   <div className="detail-item">
                     <Typography variant="body2">Bank Name</Typography>
-                    <Typography variant="body2">ABC Islamic Bank</Typography>
+                    <Typography variant="body2">State Bank Of India,Seoni</Typography>
                   </div>
                   <div className="detail-item">
                     <Typography variant="body2">IFSC Code</Typography>
                     <Typography variant="body2" fontFamily="monospace">
-                      ABCD0123456
+                      SBIN0000478
                     </Typography>
                   </div>
                 </Box>
@@ -231,7 +231,7 @@ const DonateUs = () => {
                 </Typography>
                 
                 <Avatar
-                  src="/qr-placeholder.jpg"
+                  src={imgConfig.QR}
                   variant="rounded"
                   sx={{
                     width: 220,

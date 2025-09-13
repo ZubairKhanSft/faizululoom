@@ -591,10 +591,10 @@ function Header() {
                   }
                 }}
               >
-                <MenuItem value="en" sx={{ typography: 'body2' }}>🇺🇸 English</MenuItem>
-                <MenuItem value="ar" sx={{ typography: 'body2' }}>🇸🇦 العربية</MenuItem>
-                <MenuItem value="ur" sx={{ typography: 'body2' }}>🇵🇰 اردو</MenuItem>
-                <MenuItem value="hi" sx={{ typography: 'body2' }}>🇮🇳 हिन्दी</MenuItem>
+                <MenuItem value="en" sx={{ typography: 'body2' }}> English</MenuItem>
+                <MenuItem value="ar" sx={{ typography: 'body2' }}> العربية</MenuItem>
+                <MenuItem value="ur" sx={{ typography: 'body2' }}> اردو</MenuItem>
+                <MenuItem value="hi" sx={{ typography: 'body2' }}>हिन्दी</MenuItem>
               </Select>
             </Grid>
           </Grid>
